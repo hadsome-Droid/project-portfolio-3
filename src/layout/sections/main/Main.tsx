@@ -2,21 +2,22 @@ import React from 'react';
 import styled from "styled-components";
 import photo from "../../../assets/images/different/myPhoto.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Container} from "../../../components/Container";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={'center'} justify={'space-around'}>
-                <div>
-                    <MainTitle>Hi👋, I’m a software developer</MainTitle>
-                    <p>I’m <Name>Ivan Zotov</Name> , a developer dedicated to making the world a better place one line of code at a time.</p>
-                    <a href="">Hire me</a>
-                </div>
+            <Container>
+                <FlexWrapper align={'center'} justify={'space-around'}>
+                    <div>
+                        <MainTitle>Hi👋, I’m a software developer</MainTitle>
+                        <p>I’m <Name>Ivan Zotov</Name> , a developer dedicated to making the world a better place one line of code at a time.</p>
+                        <a href="">Hire me</a>
+                    </div>
 
-                <Photo src={photo} alt=""/>
-            </FlexWrapper>
-
-
+                    <Photo src={photo} alt=""/>
+                </FlexWrapper>
+            </Container>
         </StyledMain>
     );
 };

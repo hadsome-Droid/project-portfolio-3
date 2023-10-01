@@ -39,12 +39,6 @@ const skillItem = [
       iconId:  'figma',
       skillName: 'figma',
     },
-    // {
-    //   id: 7,
-    //   iconId:  'styledComponents',
-    //   skillName: 'styledComponents',
-    // },
-
 ]
 
 export const Skills = () => {
@@ -83,7 +77,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  background-color: #4F47C71B;
+
 `
 const SkillsBox = styled.div`
   display: flex;
