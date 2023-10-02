@@ -55,7 +55,6 @@ const StyledMenu = styled.nav`
       height: 12px;
       top: 11px;
       left: -8px;
-      //animation: rotationLeft 7s linear infinite;
     }
 
     &:before {
@@ -63,7 +62,6 @@ const StyledMenu = styled.nav`
       height: 20px;
       top: -1px;
       left: -24px;
-      //animation: rotationRight 7s linear infinite;
     }
 
     &:hover, &.active {
