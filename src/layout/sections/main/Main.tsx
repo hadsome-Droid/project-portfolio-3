@@ -5,6 +5,8 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import Cube from "../../../assets/images/different/cube.svg"
 import Ellipse from "../../../assets/images/different/Ellipse.svg"
+import Zigzags from "../../../assets/images/different/zigzags.svg"
+import Plus from "../../../assets/images/different/plus.svg"
 
 export const Main = () => {
     return (
@@ -18,8 +20,8 @@ export const Main = () => {
                     </MainInfoBlock>
 
                     <MainPhotoWrapper>
-                        <MainPhoto src={photo} alt=""/>
                         <span></span>
+                        <MainPhoto src={photo} alt=""/>
                     </MainPhotoWrapper>
                 </FlexWrapper>
             </Container>
@@ -85,9 +87,35 @@ const MainLink = styled.a`
 `
 
 const MainPhotoWrapper = styled.div`
+  display: flex;
   width: 344px;
   height: 390px;
   position: relative;
+  
+  span{
+    display: block;
+    width: 38px;
+    height: 98px;
+    background-image: url(${Zigzags});
+    
+    &:before{
+      content: '';
+      width: 27px;
+      height: 27px;
+      background-image: url(${Plus});
+      position: absolute;
+      
+    }
+    &:after{
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid #4F47C8;
+      position: absolute;
+      
+    }
+  }
 
   &:before {
     content: '';
