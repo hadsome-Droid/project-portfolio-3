@@ -7,6 +7,7 @@ import Cube from "../../../assets/images/different/cube.svg"
 import Ellipse from "../../../assets/images/different/Ellipse.svg"
 import Zigzags from "../../../assets/images/different/zigzags.svg"
 import Plus from "../../../assets/images/different/plus.svg"
+import circles from "../../../assets/images/alt/circles.png"
 
 export const Main = () => {
     return (
@@ -31,8 +32,8 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   background-color: #F7F6FB;
-  padding-top: 150px;
-  min-height: 80vh;
+  padding-top: 250px;
+  min-height: 100vh;
 `
 const MainInfoBlock = styled.div`
   max-width: 553px;
@@ -88,15 +89,20 @@ const MainLink = styled.a`
 
 const MainPhotoWrapper = styled.div`
   display: flex;
-  width: 344px;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 344px;
+  width: 100%;
   height: 390px;
   position: relative;
   
   span{
     display: block;
-    width: 38px;
+    width: 45px;
     height: 98px;
     background-image: url(${Zigzags});
+    background-repeat: no-repeat;
+    background-size: cover;
     
     &:before{
       content: '';
@@ -104,6 +110,8 @@ const MainPhotoWrapper = styled.div`
       height: 27px;
       background-image: url(${Plus});
       position: absolute;
+      right: 50%;
+      top: -13%;
       
     }
     &:after{
@@ -113,6 +121,8 @@ const MainPhotoWrapper = styled.div`
       border-radius: 50%;
       border: 3px solid #4F47C8;
       position: absolute;
+      bottom: -31px;
+      left: 28px;
       
     }
   }
@@ -125,15 +135,20 @@ const MainPhotoWrapper = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+    right: -25px;
+    top: -56px;
   }
   
   &:after {
     content: '';
-    width: 207px;
-    height: 70px;
-    background-image: url(${Ellipse});
+    width: 92px;
+    height: 67px;
+    background-image: url(${circles});
     position: absolute;
-    background-repeat: space;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -48px;
+    right: -32px;
   }
 `
 
