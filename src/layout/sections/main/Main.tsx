@@ -4,7 +4,6 @@ import photo from "../../../assets/images/different/myPhoto.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import Cube from "../../../assets/images/different/cube.svg"
-import Ellipse from "../../../assets/images/different/Ellipse.svg"
 import Zigzags from "../../../assets/images/different/zigzags.svg"
 import Plus from "../../../assets/images/different/plus.svg"
 import circles from "../../../assets/images/alt/circles.png"

@@ -12,12 +12,12 @@ const skillItem = [
     {
       id: 1,
       iconId: 'css',
-      skillName: 'css3',
+      skillName: 'CSS3',
     },
     {
       id: 2,
       iconId:  'html',
-      skillName: 'html 5',
+      skillName: 'HTML 5',
     },
     {
       id: 3,
@@ -27,17 +27,17 @@ const skillItem = [
     {
       id: 4,
       iconId:  'typescript',
-      skillName: 'typescript',
+      skillName: 'TypeScript',
     },
     {
       id: 5,
       iconId:  'react',
-      skillName: 'react',
+      skillName: 'React',
     },
     {
       id: 6,
       iconId:  'figma',
-      skillName: 'figma',
+      skillName: 'Figma',
     },
 ]
 
@@ -46,28 +46,28 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <Title title={'Skills'}/>
-                <FlexWrapper justify={'space-between'} align={'center'}>
+                <FlexWrapper justify={'space-between'} align={'center'} gap={'10px'} wrap={'wrap'}>
                     <SkillsBox>
-                        <p>I have a vast experience in the following web technologies:</p>
-                        <FlexWrapper wrap={'wrap'} justify={'space-between'}>
+                        <SkillsText>I have a vast experience in the following web technologies:</SkillsText>
+                        <FlexWrapper wrap={'wrap'} justify={'space-around'} gap={'20px'}>
                             {skillItem.map((s)=>{
                                 return (
                                     <Skill key={s.id}>
                                         <Icon iconId={s.iconId} width={'75'} height={'75'}/>
-                                        <span>{s.skillName}</span>
+                                        <SkillName>{s.skillName}</SkillName>
                                     </Skill>
                                 )
                             })}
                             <Skill>
                                 <img src={Styled} alt=""/>
-                                <span>Styled Components</span>
+                                <SkillName>Styled Components</SkillName>
                             </Skill>
                         </FlexWrapper>
                     </SkillsBox>
 
-                    <div>
+                    <SkillsImageBlock>
                         <img src={UndrawProject} alt=""/>
-                    </div>
+                    </SkillsImageBlock>
                 </FlexWrapper>
 
             </Container>
@@ -77,14 +77,26 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-
+    padding-bottom: 35px;
+    h2{
+      color: #E84949;
+      margin-bottom: 30px;
+    }
 `
 const SkillsBox = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 506px;
+  justify-content: space-between;
+  max-width: 530px;
   width: 100%;
-  min-height: 100%;
+  min-height: 325px;
+`
+const SkillsText = styled.p`
+  display: block;
+padding-bottom: 40px;
+  color: #818080;
+  font-size: 18px;
+  font-weight: 400;
 `
 
 const Skill = styled.div`
@@ -92,21 +104,32 @@ const Skill = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  max-width: 75px;
+  max-width: 80px;
   width: 100%;
   min-height: 100%;
-  position: relative;
-  z-index: 0;
-
-  &:before {
-    content: '';
-    min-height: 100%;
-    min-width: 100%;
-    //background-color: #b21111;
-    background-image: url(${Polygon});
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    z-index: -1;
+  background-image: url(${Polygon});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 3%;
+`
+const SkillName = styled.span`
+  display: block;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 10%;
+  width: 80px;
+  text-align: center;
+`
+const SkillsImageBlock = styled.div`
+  max-width: 512px;
+  width: 100%;
+  min-height: 414px;
+  
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `
