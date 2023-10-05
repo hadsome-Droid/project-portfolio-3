@@ -77,11 +77,12 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    padding-bottom: 35px;
+    padding-bottom: 70px;
     h2{
       color: #E84949;
       margin-bottom: 30px;
     }
+  
 `
 const SkillsBox = styled.div`
   display: flex;

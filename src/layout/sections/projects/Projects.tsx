@@ -31,7 +31,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <Title title={'Projects'}/>
-                <FlexWrapper direction={'column'} align={'center'}>
+                <FlexWrapper direction={'column'} align={'center'} gap={'24px'}>
                     <h3>A select number of projects</h3>
                     <ProjectBox>
 
@@ -58,6 +58,18 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
   background-color: #343D68;
+  
+  ${Container}{
+    padding-top: 30px;
+    padding-bottom: 40px;
+  h3{
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 18px;
+ 
+    font-weight: 400;
+
+  }
+  }
 `
 
 const ProjectBox = styled.div`
@@ -66,12 +78,17 @@ const ProjectBox = styled.div`
   align-items: center;
   flex-wrap: wrap;
   min-width: 100%;
+  width: 100%;
 `
 
 const Project = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 372px;
   width: 100%;
-  min-height: 100%;
+  min-height: 434px;
+  padding-bottom: 12px;
 `
 
 const ProjectPrev = styled.div`
@@ -84,9 +101,15 @@ const ProjectPrev = styled.div`
 `
 
 const ProjectInfo = styled.p`
-
+  color: rgba(255, 255, 255, 0.87);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
 `
 
 const ProjectLink = styled.a`
-
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
 `
