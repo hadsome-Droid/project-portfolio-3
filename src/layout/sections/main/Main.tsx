@@ -31,7 +31,7 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   background-color: #F7F6FB;
-  padding-top: 250px;
+  padding-top: 210px;
   min-height: 100vh;
 `
 const MainInfoBlock = styled.div`

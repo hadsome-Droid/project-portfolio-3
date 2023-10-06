@@ -77,7 +77,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    padding-bottom: 70px;
+  padding: 70px 0;
     h2{
       color: #E84949;
       margin-bottom: 30px;
