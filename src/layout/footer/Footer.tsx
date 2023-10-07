@@ -16,17 +16,12 @@ export const Footer = () => {
                             <ul>
                                 <li>
                                     <a href="">
-                                        <Icon iconId={'telegram'}/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
                                         <Icon iconId={'linkedin'}/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <Icon iconId={'email'}/>
+                                        <Icon iconId={'telegram'}/>
                                     </a>
                                 </li>
                                 <li>
@@ -34,13 +29,18 @@ export const Footer = () => {
                                         <Icon iconId={'whatsapp'}/>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="">
+                                        <Icon iconId={'email'}/>
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                     </BlockLinks>
                     <Git>
                         <p>More projects I’ve worked on</p>
-                        <Icon iconId={'github'}/>
-                        <small>@ <a href="">john-doe</a>  on github</small>
+
+                        <small><Icon iconId={'github'} viewBox={'0 7 64 64'}/> @ <a href="">Ivan Zotov </a>  on github</small>
                     </Git>
                 </FlexWrapper>
             </Container>
@@ -50,11 +50,20 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background-color: #F7F6FB;
+  height: 300px;
   position: relative;
+  color: #FFFAFA;
   z-index: 0;
   
   ${Container}{
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ${FlexWrapper}{
+    max-width: 1240px;
+    width: 100%;
   }
 
   &:before {
@@ -73,12 +82,41 @@ const StyledFooter = styled.footer`
 
 `
 const BlockLinks = styled.div`
-
+  max-width: 315px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  p{
+    padding-bottom: 34px;
+    
+  }
+  
     ul{
       display: flex;
-      
+      justify-content: space-between;
     }
 `
 const Git = styled.div`
+  max-width: 270px;
+  width: 100%;
 
+  font-size: 18px;
+  font-weight: 400;
+
+  
+  p{
+    padding-bottom: 19px;
+    
+  }
+  
+  small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  a{
+    color: #0ACBBF;
+  }
 `
