@@ -3,10 +3,10 @@ import {Icon} from "../../../components/icon/Icon";
 import Styled from "../../../assets/images/different/styled-components.webp"
 import styled from "styled-components";
 import {Container} from "../../../components/Container";
-import {Title} from "../../../components/title/Title";
 import UndrawProject from "../../../assets/images/different/undraw_project_completed.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import Polygon from "../../../assets/images/alt/Polygon.svg"
+import {SectionTitle} from "../../../components/SectionTitle";
 
 const skillItem = [
     {
@@ -45,7 +45,7 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <Title title={'Skills'}/>
+                <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper justify={'space-between'} align={'center'} gap={'10px'} wrap={'wrap'}>
                     <SkillsBox>
                         <SkillsText>I have a vast experience in the following web technologies:</SkillsText>
@@ -78,10 +78,7 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   padding: 70px 0;
-    h2{
-      color: #E84949;
-      margin-bottom: 30px;
-    }
+  
   
 `
 const SkillsBox = styled.div`

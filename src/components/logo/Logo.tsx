@@ -21,4 +21,5 @@ const StyledLogo = styled.a`
     width: 100%;
     object-fit: cover;
   }
+  
 `
